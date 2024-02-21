@@ -17,22 +17,18 @@ function fileToGenerativePart(path, mimeType) {
   };
 }
 
-const promptbirds =
-  "What's the animals name and count the numbers, on these pictures";
-const promptmountains = "What's different between these pictures?";
+const promptBirdPoem =
+  "Write a short poem under 100 words, based on this picture";
 
 async function run() {
   // For text-and-image input (multimodal), use the gemini-pro-vision model
   const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
 
-  // const prompt = "What's different between these pictures?";
-
   const imageParts = [
     fileToGenerativePart("./assets/birds-2.jpg", "image/jpeg"),
-    fileToGenerativePart("./assets/birds.jpg", "image/jpeg"),
   ];
 
-  const result = await model.generateContent([promptbirds, ...imageParts]);
+  const result = await model.generateContent([promptBirdPoem, ...imageParts]);
   const response = await result.response;
   const text = response.text();
   console.log(text);
