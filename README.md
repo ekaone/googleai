@@ -62,6 +62,7 @@ Run code
 node multimodal.js
 ```
 
-## Conversations (chat)
+## models/gemini-pro - Conversations (chat)
 
-Demo chat [here](https://vertexai.prasetia.me/vertexai)
+- Demo chat [here](https://vertexai.prasetia.me/vertexai)
+- Sourcecode [here](https://github.com/ekaone/chatbot-vertexai)
